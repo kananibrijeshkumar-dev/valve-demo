@@ -8,18 +8,18 @@ export default {
     extend: {
       colors: {
         industrial: {
-          50: '#f2f8f9',
-          100: '#dfedf0',
-          200: '#c3dce2',
-          300: '#98c2cd',
-          400: '#67a0b1',
-          500: '#488496',
-          600: '#3d6e7f',
-          700: '#355a69',
-          800: '#304c58',
-          900: '#2a414c',
-          950: '#192a33',
-        }
+          50: '#f0fdfa',
+          100: '#ccfbf1',
+          200: '#99f6e4',
+          300: '#5eead4',
+          400: '#2dd4bf', // Electric Cobalt/Cyan
+          500: '#14b8a6',
+          600: '#0d9488',
+          700: '#0f766e',
+          800: '#1e293b', // Dark Metal light
+          900: '#0f172a', // Dark Metal dark
+          950: '#020617', // Pitch black metal
+        },
       }
     },
   },
