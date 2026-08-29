@@ -1,9 +1,11 @@
 import React from 'react';
 import PageBanner from '../components/PageBanner';
+import SEO from '../components/SEO';
 
 export default function AboutPage() {
   return (
     <div className="bg-white min-h-screen pt-16">
+      <SEO title="About Us" description="Learn about D.M. Valve Product, an ISO 9001:2015 certified manufacturer of industrial valves in Ahmedabad, Gujarat." />
       <PageBanner title="About Us" breadcrumb="About" />
 
       <section className="py-24">

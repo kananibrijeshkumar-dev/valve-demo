@@ -1,10 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import SEO from '../components/SEO';
 
 export default function HomePage({ onOpenQuote }) {
+  const { t } = useLanguage();
+
   return (
     <div className="bg-white min-h-screen pt-16">
+      <SEO 
+        title="Industrial Valve Manufacturer in Ahmedabad" 
+        description="Premium manufacturer of zero-leakage industrial valves. We specialize in TC End Ball Valves and Flush Bottom Tank Valves."
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-minimal-bg"></div>
@@ -13,23 +21,23 @@ export default function HomePage({ onOpenQuote }) {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-48 flex items-center">
           <div className="max-w-2xl z-10">
             <h1 className="text-5xl font-light text-minimal-text sm:text-6xl lg:text-7xl mb-6 tracking-tight leading-tight">
-              Precision <br/><span className="font-bold">Engineered.</span>
+              {t('home', 'hero_title')} <br/><span className="font-bold">{t('home', 'hero_title_bold')}</span>
             </h1>
             <p className="mt-4 text-lg text-minimal-textLight max-w-xl mb-12 leading-relaxed font-light">
-              D.M. Valve Product manufactures heavy-duty, zero-leakage industrial valves for the world's most demanding environments. Based in Ahmedabad, trusted globally.
+              {t('home', 'hero_desc')}
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
               <button 
                 onClick={() => onOpenQuote("Bulk Order Inquiry")} 
                 className="bg-minimal-text text-white px-8 py-4 rounded-full font-medium text-base hover:bg-minimal-accent transition-all duration-300 shadow-lg shadow-minimal-text/20 flex items-center justify-center"
               >
-                Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
+                {t('home', 'request_quote')} <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <Link 
                 to="/products" 
                 className="bg-white border border-minimal-border text-minimal-text px-8 py-4 rounded-full font-medium text-base hover:bg-minimal-bg transition-colors flex items-center justify-center shadow-sm"
               >
-                View Catalog
+                {t('home', 'view_catalog')}
               </Link>
             </div>
           </div>
@@ -47,25 +55,25 @@ export default function HomePage({ onOpenQuote }) {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-3xl font-light text-minimal-text tracking-tight">The D.M. Valve <span className="font-bold">Standard</span></h2>
+            <h2 className="text-3xl font-light text-minimal-text tracking-tight">{t('home', 'standard_title')} <span className="font-bold">{t('home', 'standard_title_bold')}</span></h2>
             <div className="w-12 h-1 bg-minimal-accent mx-auto mt-6 rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="p-8 rounded-3xl bg-minimal-bg hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-minimal-border group">
               <CheckCircle2 className="h-10 w-10 text-minimal-textLight group-hover:text-minimal-text transition-colors mb-6" />
-              <h3 className="text-xl font-semibold text-minimal-text mb-4">ISO 9001:2015</h3>
-              <p className="text-minimal-textLight font-light leading-relaxed">Internationally certified manufacturing processes ensuring consistent quality and material traceability.</p>
+              <h3 className="text-xl font-semibold text-minimal-text mb-4">{t('home', 'features').f1_title}</h3>
+              <p className="text-minimal-textLight font-light leading-relaxed">{t('home', 'features').f1_desc}</p>
             </div>
             <div className="p-8 rounded-3xl bg-minimal-bg hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-minimal-border group">
               <CheckCircle2 className="h-10 w-10 text-minimal-textLight group-hover:text-minimal-text transition-colors mb-6" />
-              <h3 className="text-xl font-semibold text-minimal-text mb-4">100% Tested</h3>
-              <p className="text-minimal-textLight font-light leading-relaxed">Every valve undergoes intense hydrostatic testing for a strict zero-leakage guarantee before shipping.</p>
+              <h3 className="text-xl font-semibold text-minimal-text mb-4">{t('home', 'features').f2_title}</h3>
+              <p className="text-minimal-textLight font-light leading-relaxed">{t('home', 'features').f2_desc}</p>
             </div>
             <div className="p-8 rounded-3xl bg-minimal-bg hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-minimal-border group">
               <CheckCircle2 className="h-10 w-10 text-minimal-textLight group-hover:text-minimal-text transition-colors mb-6" />
-              <h3 className="text-xl font-semibold text-minimal-text mb-4">Custom Fabrication</h3>
-              <p className="text-minimal-textLight font-light leading-relaxed">We design and manufacture specialized valves based on client requirements for unique industrial applications.</p>
+              <h3 className="text-xl font-semibold text-minimal-text mb-4">{t('home', 'features').f3_title}</h3>
+              <p className="text-minimal-textLight font-light leading-relaxed">{t('home', 'features').f3_desc}</p>
             </div>
           </div>
         </div>

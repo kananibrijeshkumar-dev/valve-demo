@@ -11,6 +11,7 @@ import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
 import QualityPage from './pages/QualityPage';
 import AdminPortal from './pages/AdminPortal';
+import { LanguageProvider } from './context/LanguageContext';
 
 // Scroll to top helper
 function ScrollToTop() {
@@ -31,6 +32,7 @@ function App() {
   };
 
   return (
+    <LanguageProvider>
     <div className="min-h-screen bg-white font-sans flex flex-col text-minimal-text selection:bg-minimal-accent selection:text-white">
       <ScrollToTop />
       
@@ -65,6 +67,7 @@ function App() {
         <Route path="*" element={<Footer onOpenQuote={handleOpenQuote} />} />
       </Routes>
     </div>
+    </LanguageProvider>
   );
 }
 
