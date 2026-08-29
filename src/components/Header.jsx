@@ -22,9 +22,17 @@ export default function Header({ onOpenQuote }) {
               <span><strong>Mobile:</strong> +91 9624481284</span>
             </div>
           </div>
-          <div className="flex items-center">
-            <Mail className="h-4 w-4 mr-2 text-classic-red" />
-            <span><strong>Email:</strong> <a href="mailto:sales@dmvalveproduct.com" className="hover:text-classic-red transition-colors">sales@dmvalveproduct.com</a></span>
+          <div className="flex items-center space-x-6">
+            <div className="flex items-center">
+              <Mail className="h-4 w-4 mr-2 text-classic-red" />
+              <span><strong>Email:</strong> <a href="mailto:sales@dmvalveproduct.com" className="hover:text-classic-red transition-colors">sales@dmvalveproduct.com</a></span>
+            </div>
+            <div className="flex space-x-3 text-classic-red">
+              <a href="#" className="hover:text-white transition-colors"><i className="fa-brands fa-whatsapp text-lg"></i></a>
+              <a href="#" className="hover:text-white transition-colors"><i className="fa-brands fa-facebook text-lg"></i></a>
+              <a href="#" className="hover:text-white transition-colors"><i className="fa-brands fa-youtube text-lg"></i></a>
+              <a href="#" className="hover:text-white transition-colors"><i className="fa-brands fa-instagram text-lg"></i></a>
+            </div>
           </div>
         </div>
       </div>

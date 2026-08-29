@@ -10,6 +10,7 @@ import ProductsPage from './pages/ProductsPage';
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
 import QualityPage from './pages/QualityPage';
+import AdminPortal from './pages/AdminPortal';
 
 // Scroll to top helper
 function ScrollToTop() {
@@ -40,8 +41,11 @@ function App() {
         productName={selectedProduct} 
       />
 
-      {/* Global Header */}
-      <Header onOpenQuote={handleOpenQuote} />
+      {/* Global Header (Hide on Admin Portal) */}
+      <Routes>
+        <Route path="/secret-admin" element={null} />
+        <Route path="*" element={<Header onOpenQuote={handleOpenQuote} />} />
+      </Routes>
 
       {/* Page Content Routes */}
       <main className="flex-grow">
@@ -51,11 +55,15 @@ function App() {
           <Route path="/quality" element={<QualityPage />} />
           <Route path="/products" element={<ProductsPage onOpenQuote={handleOpenQuote} />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/secret-admin" element={<AdminPortal />} />
         </Routes>
       </main>
 
-      {/* Global Footer */}
-      <Footer onOpenQuote={handleOpenQuote} />
+      {/* Global Footer (Hide on Admin Portal) */}
+      <Routes>
+        <Route path="/secret-admin" element={null} />
+        <Route path="*" element={<Footer onOpenQuote={handleOpenQuote} />} />
+      </Routes>
     </div>
   );
 }

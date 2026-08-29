@@ -21,6 +21,12 @@ export default function Footer() {
             <p className="text-gray-400 mb-6 text-sm leading-relaxed">
               Leading manufacturer and exporter of premium quality industrial valves in India. Commited to precision and zero-leakage performance since 2002.
             </p>
+            <div className="flex space-x-4">
+              <a href="#" className="bg-classic-navyLight text-classic-red h-10 w-10 flex items-center justify-center rounded hover:bg-classic-red hover:text-white transition-colors"><i className="fa-brands fa-whatsapp text-xl"></i></a>
+              <a href="#" className="bg-classic-navyLight text-classic-red h-10 w-10 flex items-center justify-center rounded hover:bg-classic-red hover:text-white transition-colors"><i className="fa-brands fa-facebook text-xl"></i></a>
+              <a href="#" className="bg-classic-navyLight text-classic-red h-10 w-10 flex items-center justify-center rounded hover:bg-classic-red hover:text-white transition-colors"><i className="fa-brands fa-youtube text-xl"></i></a>
+              <a href="#" className="bg-classic-navyLight text-classic-red h-10 w-10 flex items-center justify-center rounded hover:bg-classic-red hover:text-white transition-colors"><i className="fa-brands fa-instagram text-xl"></i></a>
+            </div>
           </div>
 
           {/* Quick Links */}
