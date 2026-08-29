@@ -19,7 +19,7 @@ export default function Header({ onOpenQuote }) {
           <div className="flex items-center space-x-6">
             <div className="flex items-center">
               <Phone className="h-4 w-4 mr-2 text-classic-red" />
-              <span><strong>Mobile:</strong> +91 98765 43210</span>
+              <span><strong>Mobile:</strong> +91 9624481284</span>
             </div>
           </div>
           <div className="flex items-center">

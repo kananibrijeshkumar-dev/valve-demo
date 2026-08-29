@@ -48,9 +48,8 @@ export default function ContactPage() {
                   <div>
                     <h5 className="font-bold text-lg mb-2">Location</h5>
                     <p className="text-gray-400 leading-relaxed">
-                      5/9/55, Lilanagar, Near Khodiyar Nagar,<br/>
-                      Nikol Road, Bapunagar,<br/>
-                      Ahmedabad - 380024, Gujarat, India
+                      88, Sattadhar Nagar, Khodiar Nagar,<br/>
+                      Ahmedabad, Gujarat 382350
                     </p>
                   </div>
                 </div>
@@ -59,7 +58,7 @@ export default function ContactPage() {
                   <Phone className="h-6 w-6 text-classic-red mr-4 mt-1 flex-shrink-0" />
                   <div>
                     <h5 className="font-bold text-lg mb-2">Phone</h5>
-                    <p className="text-gray-400">+91 98765 43210</p>
+                    <p className="text-gray-400">+91 9624481284</p>
                   </div>
                 </div>
                 

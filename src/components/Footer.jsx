@@ -41,14 +41,13 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-classic-red mr-3 flex-shrink-0 mt-1" />
                 <span className="text-gray-400 text-sm leading-relaxed">
-                  5/9/55, Lilanagar, Near Khodiyar Nagar,<br/>
-                  Nikol Road, Bapunagar,<br/>
-                  Ahmedabad - 380024, Gujarat
+                  88, Sattadhar Nagar, Khodiar Nagar,<br/>
+                  Ahmedabad, Gujarat 382350
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-4 w-4 text-classic-red mr-3 flex-shrink-0" />
-                <span className="text-gray-400 text-sm">+91 98765 43210</span>
+                <span className="text-gray-400 text-sm">+91 9624481284</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-4 w-4 text-classic-red mr-3 flex-shrink-0" />
