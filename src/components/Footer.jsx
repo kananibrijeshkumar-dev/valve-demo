@@ -89,9 +89,6 @@ export default function Footer() {
             <p className="text-gray-400 mb-2 md:mb-0">
               Copyright © {new Date().getFullYear()} <span className="text-classic-red">D.M. VALVE PRODUCT</span>. All rights reserved. 
             </p>
-            <p className="text-gray-400">
-              Designed by Briz Patel
-            </p>
           </div>
         </div>
       </div>
