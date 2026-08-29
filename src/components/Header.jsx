@@ -38,15 +38,15 @@ export default function Header({ onOpenQuote }) {
             </Link>
             
             <div className="hidden lg:flex items-center text-sm text-minimal-textLight space-x-6 border-l border-minimal-border pl-6">
-              <div className="flex items-center hover:text-minimal-text transition-colors">
+              <a href="tel:+919624481284" className="flex items-center hover:text-minimal-text transition-colors">
                 <Phone className="h-4 w-4 mr-2" />
                 <span>+91 9624481284</span>
-              </div>
+              </a>
               <div className="flex items-center space-x-4 text-base">
-                <a href="#" className="hover:text-minimal-text transition-colors"><i className="fa-brands fa-whatsapp"></i></a>
-                <a href="#" className="hover:text-minimal-text transition-colors"><i className="fa-brands fa-facebook"></i></a>
-                <a href="#" className="hover:text-minimal-text transition-colors"><i className="fa-brands fa-youtube"></i></a>
-                <a href="#" className="hover:text-minimal-text transition-colors"><i className="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/919624481284" target="_blank" rel="noopener noreferrer" className="hover:text-minimal-text transition-colors"><i className="fa-brands fa-whatsapp"></i></a>
+                <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" className="hover:text-minimal-text transition-colors"><i className="fa-brands fa-facebook"></i></a>
+                <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" className="hover:text-minimal-text transition-colors"><i className="fa-brands fa-youtube"></i></a>
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:text-minimal-text transition-colors"><i className="fa-brands fa-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -55,7 +55,7 @@ export default function Header({ onOpenQuote }) {
           <div className="hidden md:flex items-center space-x-8">
             <nav className="flex space-x-8 text-sm tracking-wide">
               <Link to="/" className={getLinkClass('/')}>Home</Link>
-              <Link to="/about" className={getLinkClass('/about')}>About</Link>
+              <Link to="/about" className={getLinkClass('/about')}>About Us</Link>
               <Link to="/products" className={getLinkClass('/products')}>Gallery</Link>
               <Link to="/quality" className={getLinkClass('/quality')}>Quality</Link>
               <Link to="/contact" className={getLinkClass('/contact')}>Contact</Link>

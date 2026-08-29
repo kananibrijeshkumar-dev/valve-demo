@@ -22,10 +22,10 @@ export default function Footer() {
               Leading manufacturer and exporter of premium quality industrial valves in India. Commited to precision and zero-leakage performance since 2002.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="bg-minimal-footerBorder text-white h-10 w-10 flex items-center justify-center rounded-full hover:bg-white hover:text-minimal-footerBg transition-all"><i className="fa-brands fa-whatsapp text-lg"></i></a>
-              <a href="#" className="bg-minimal-footerBorder text-white h-10 w-10 flex items-center justify-center rounded-full hover:bg-white hover:text-minimal-footerBg transition-all"><i className="fa-brands fa-facebook text-lg"></i></a>
-              <a href="#" className="bg-minimal-footerBorder text-white h-10 w-10 flex items-center justify-center rounded-full hover:bg-white hover:text-minimal-footerBg transition-all"><i className="fa-brands fa-youtube text-lg"></i></a>
-              <a href="#" className="bg-minimal-footerBorder text-white h-10 w-10 flex items-center justify-center rounded-full hover:bg-white hover:text-minimal-footerBg transition-all"><i className="fa-brands fa-instagram text-lg"></i></a>
+              <a href="https://wa.me/919624481284" target="_blank" rel="noopener noreferrer" className="bg-minimal-footerBorder text-white h-10 w-10 flex items-center justify-center rounded-full hover:bg-white hover:text-minimal-footerBg transition-all"><i className="fa-brands fa-whatsapp text-lg"></i></a>
+              <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" className="bg-minimal-footerBorder text-white h-10 w-10 flex items-center justify-center rounded-full hover:bg-white hover:text-minimal-footerBg transition-all"><i className="fa-brands fa-facebook text-lg"></i></a>
+              <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" className="bg-minimal-footerBorder text-white h-10 w-10 flex items-center justify-center rounded-full hover:bg-white hover:text-minimal-footerBg transition-all"><i className="fa-brands fa-youtube text-lg"></i></a>
+              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="bg-minimal-footerBorder text-white h-10 w-10 flex items-center justify-center rounded-full hover:bg-white hover:text-minimal-footerBg transition-all"><i className="fa-brands fa-instagram text-lg"></i></a>
             </div>
           </div>
 
