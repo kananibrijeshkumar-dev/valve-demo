@@ -23,7 +23,7 @@ export default function AboutPage() {
               <h3 className="text-3xl font-light text-minimal-text mb-8 tracking-tight">Our <span className="font-bold">Legacy</span></h3>
               
               <p className="text-minimal-textLight text-lg mb-6 leading-relaxed font-light">
-                Located in the industrial hub of Vatva and Bapunagar, Gujarat, our manufacturing facility is equipped with state-of-the-art CNC machinery and rigorous testing environments. 
+                Located in the industrial hub of Bapunagar, Gujarat, our manufacturing facility is equipped with state-of-the-art CNC machinery and rigorous testing environments. 
               </p>
               <p className="text-minimal-textLight text-lg leading-relaxed mb-10 font-light">
                 Since 2002, we have specialized in manufacturing heavy-duty TC End Ball Valves, SS Three Way Ball Valves, and Flush Bottom Tank Valves. Our commitment is simple: zero-leakage, absolute precision, and unyielding durability.
