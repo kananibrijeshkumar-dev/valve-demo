@@ -7,13 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        classic: {
-          red: '#f31717',
-          navy: '#131830',
-          navyLight: '#282d47',
-          bgGrey: '#f2f6f9',
-          borderGrey: '#e4e4e4',
-          textGrey: '#616161'
+        minimal: {
+          bg: '#f8f9fa',        // Soft pearl grey for backgrounds
+          white: '#ffffff',
+          accent: '#475569',    // Steel blue/grey for buttons and hovers
+          text: '#1e293b',      // Deep slate for main text
+          textLight: '#64748b', // Lighter slate for secondary text
+          border: '#e2e8f0',
+          footerBg: '#0f172a',  // Deep, premium slate for footer
+          footerBorder: '#1e293b'
         },
       }
     },
