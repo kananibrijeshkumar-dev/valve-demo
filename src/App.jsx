@@ -30,7 +30,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-industrial-900 font-sans flex flex-col text-white selection:bg-industrial-400 selection:text-industrial-950">
+    <div className="min-h-screen bg-white font-sans flex flex-col text-classic-navy selection:bg-classic-red selection:text-white">
       <ScrollToTop />
       
       {/* Global Quote Modal */}

@@ -1,49 +1,37 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import PageBanner from '../components/PageBanner';
 import { products } from '../data/products';
 
-export default function ProductsPage({ onOpenQuote }) {
+export default function ProductsPage() {
   return (
-    <div className="bg-industrial-900 min-h-screen pt-20">
-      {/* Page Header */}
-      <div className="bg-industrial-950 py-24 border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-extrabold text-white tracking-tighter sm:text-6xl mb-6">
-            FULL <span className="text-industrial-400 font-light">CATALOG</span>
-          </h1>
-          <p className="mt-4 text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
-            Explore our extensive range of high-performance valves built to withstand the toughest chemical and physical conditions.
-          </p>
-        </div>
-      </div>
+    <div className="bg-classic-bgGrey min-h-screen pb-24">
+      <PageBanner title="Photo Gallery" breadcrumb="Photo Gallery" />
 
-      {/* Massive Product Grid */}
-      <section className="py-24 bg-industrial-900">
+      <section className="pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="mb-8">
+            <h3 className="text-2xl font-bold text-classic-navy"><strong>Photo Gallery</strong></h3>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product) => (
-              <div key={product.id} className="bg-industrial-950 rounded-2xl overflow-hidden border border-gray-800 hover:border-industrial-400/50 hover:shadow-[0_0_20px_rgba(45,212,191,0.15)] transition-all duration-500 group flex flex-col">
-                <div className="h-64 overflow-hidden bg-industrial-900 p-6 flex items-center justify-center relative">
-                  <div className="absolute top-4 left-4 border border-industrial-400/30 text-industrial-400 text-xs font-bold px-3 py-1 rounded-full z-10 uppercase tracking-wider backdrop-blur-md bg-industrial-950/50">
-                    {product.category}
-                  </div>
+              <div key={product.id} className="relative group overflow-hidden bg-white shadow-sm">
+                <div className="aspect-w-4 aspect-h-3 overflow-hidden">
                   <img 
                     src={product.image} 
                     alt={product.name} 
-                    className="w-full h-full object-cover mix-blend-luminosity opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
-                <div className="p-8 flex flex-col flex-grow">
-                  <h3 className="text-xl font-bold text-white mb-4">{product.name}</h3>
-                  <p className="text-gray-400 mb-8 text-sm flex-grow leading-relaxed">
-                    {product.desc}
-                  </p>
-                  <button 
-                    onClick={() => onOpenQuote(product.name)}
-                    className="w-full text-center bg-transparent hover:bg-industrial-400 text-industrial-400 hover:text-industrial-950 font-bold py-3 rounded-full border border-industrial-400/50 transition-all duration-300 flex items-center justify-center"
-                  >
-                    Request Specs <ArrowRight className="ml-2 h-5 w-5" />
-                  </button>
+                
+                {/* Dark Overlay (mimicking the reference site's slide-up overlay) */}
+                <div className="absolute inset-0 bg-classic-navy/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 text-center">
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      <span className="hover:text-classic-red transition-colors cursor-pointer">{product.name}</span>
+                    </h3>
+                    <div className="w-12 h-1 bg-classic-red mx-auto mt-4"></div>
+                  </div>
                 </div>
               </div>
             ))}

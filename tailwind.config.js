@@ -7,18 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        industrial: {
-          50: '#f0fdfa',
-          100: '#ccfbf1',
-          200: '#99f6e4',
-          300: '#5eead4',
-          400: '#2dd4bf', // Electric Cobalt/Cyan
-          500: '#14b8a6',
-          600: '#0d9488',
-          700: '#0f766e',
-          800: '#1e293b', // Dark Metal light
-          900: '#0f172a', // Dark Metal dark
-          950: '#020617', // Pitch black metal
+        classic: {
+          red: '#f31717',
+          navy: '#131830',
+          navyLight: '#282d47',
+          bgGrey: '#f2f6f9',
+          borderGrey: '#e4e4e4',
+          textGrey: '#616161'
         },
       }
     },

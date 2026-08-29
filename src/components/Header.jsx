@@ -1,41 +1,66 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Settings } from 'lucide-react';
+import { Phone, Mail, Settings } from 'lucide-react';
 
 export default function Header({ onOpenQuote }) {
   const location = useLocation();
 
   const getLinkClass = (path) => {
     return location.pathname === path 
-      ? "text-industrial-400 font-bold"
-      : "text-gray-300 hover:text-industrial-400 font-medium transition-colors";
+      ? "text-classic-red font-bold"
+      : "text-classic-navy font-bold hover:text-classic-red transition-colors";
   };
 
   return (
-    <nav className="fixed w-full z-50 bg-industrial-950/80 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
-          <Link to="/" className="flex items-center space-x-2 group">
-            <Settings className="h-6 w-6 text-industrial-400 group-hover:rotate-90 transition-transform duration-500" />
-            <span className="font-bold text-xl tracking-tight text-white">
-              D.M. VALVE <span className="text-industrial-400 font-light">PRODUCT</span>
-            </span>
-          </Link>
-          <div className="hidden md:flex space-x-8">
-            <Link to="/" className={getLinkClass('/')}>Home</Link>
-            <Link to="/about" className={getLinkClass('/about')}>About Us</Link>
-            <Link to="/products" className={getLinkClass('/products')}>Products</Link>
-            <Link to="/quality" className={getLinkClass('/quality')}>Quality</Link>
-            <Link to="/contact" className={getLinkClass('/contact')}>Contact</Link>
+    <header className="w-full shadow-md z-50 bg-white sticky top-0">
+      {/* Top Bar */}
+      <div className="bg-classic-navyLight text-white py-2 hidden md:block">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-sm">
+          <div className="flex items-center space-x-6">
+            <div className="flex items-center">
+              <Phone className="h-4 w-4 mr-2 text-classic-red" />
+              <span><strong>Mobile:</strong> +91 98765 43210</span>
+            </div>
           </div>
-          <button 
-            onClick={() => onOpenQuote("General Inquiry")}
-            className="bg-industrial-400 text-industrial-950 px-5 py-2 rounded-full font-bold hover:bg-industrial-300 hover:shadow-[0_0_15px_rgba(45,212,191,0.5)] transition-all duration-300 text-sm"
-          >
-            Get a Quote
-          </button>
+          <div className="flex items-center">
+            <Mail className="h-4 w-4 mr-2 text-classic-red" />
+            <span><strong>Email:</strong> <a href="mailto:sales@dmvalveproduct.com" className="hover:text-classic-red transition-colors">sales@dmvalveproduct.com</a></span>
+          </div>
         </div>
       </div>
-    </nav>
+
+      {/* Main Navigation */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-20 items-center">
+          
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <Settings className="h-10 w-10 text-classic-red" />
+            <div className="flex flex-col">
+              <span className="font-extrabold text-2xl tracking-tight text-classic-navy leading-none">
+                D.M. VALVE
+              </span>
+              <span className="text-xs font-bold text-classic-textGrey tracking-widest">PRODUCT</span>
+            </div>
+          </Link>
+
+          {/* Nav Links */}
+          <div className="hidden md:flex space-x-8 items-center">
+            <Link to="/" className={getLinkClass('/')}>HOME</Link>
+            <Link to="/about" className={getLinkClass('/about')}>ABOUT US</Link>
+            <Link to="/products" className={getLinkClass('/products')}>PHOTO GALLERY</Link>
+            <Link to="/quality" className={getLinkClass('/quality')}>QUALITY</Link>
+            <Link to="/contact" className={getLinkClass('/contact')}>CONTACT US</Link>
+            
+            <button 
+              onClick={() => onOpenQuote("General Inquiry")}
+              className="bg-classic-red text-white px-6 py-2.5 font-bold hover:bg-classic-navy transition-colors text-sm uppercase tracking-wider"
+            >
+              Get a Quote
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
   );
 }
